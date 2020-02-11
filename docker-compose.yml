@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: thecodingmachine/php:7.4-v3-apache-node12
+    ports:
+    - "80:80"
+    volumes:
+    - .:/var/www/html
+    links:
+    - mysql
+    
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
