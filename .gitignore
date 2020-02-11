@@ -2,3 +2,7 @@ vendor
 var
 .env
 node_modules
+assets/js/src/App.js
+public/build/app.js
+public/build/vendors~app.css
+public/build/vendor-app.js
